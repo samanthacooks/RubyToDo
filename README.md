@@ -33,7 +33,7 @@ Become a World-Class Developer
 
 ###Release 0 : Enumerate the responsibilities
 
-Start by enumerating the responsibilities of your TODO application.  These aren't just the user-facing commands like "add", "delete", etc.  They're also back-end responsibilities like reading and writing from the `todo.csv` file, parsing command-line arguments, and printing the "interface" to the console.
+Start by enumerating the responsibilities of your TODO application.  These aren't just the user-facing commands like "add", "delete", etc.  They're also back-end responsibilities like reading and writing from the `todo_list_data.csv` file, parsing command-line arguments, and printing the "interface" to the console.
 
 Each responsibility should map to a concrete unit of Ruby code.  For example,
 
@@ -45,7 +45,7 @@ Get all the tasks on a TODO list                                                
 Delete a particular task from a TODO list                                          | `???`
 Complete a particular task on a TODO list                                          | `???`
 Parse the command-line arguments and take the appropriate action                   | `???`
-Parse the `todo.csv` file and wrap each entry in easier-to-manipulate Ruby objects | `???`
+Parse the `todo_list_data.csv` file and wrap each entry in easier-to-manipulate Ruby objects | `???`
 
 
 There are other responsibilities.  What are they?
@@ -118,7 +118,7 @@ Requirements:
 - A user can complete a specific task from their TODO list
 - A completed TODO task will be identified as such when a user uses the `list` command
 
-**Note**: This will require changing the format of `todo.csv` and the code that parses it.
+**Note**: This will require changing the format of `todo_list_data.csv` and the code that parses it.
 
 ###Release 2 : Human Readable File
 
