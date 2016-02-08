@@ -13,10 +13,10 @@
 From the user's perspective, we want to build something that works like this:
 
 ```text
-$ ruby todo.rb add Bake a delicious blueberry-glazed cheesecake
-$ ruby todo.rb list
-$ ruby todo.rb delete <task_id>
-$ ruby todo.rb complete <task_id>
+$ ruby todo_list_runner.rb add Bake a delicious blueberry-glazed cheesecake
+$ ruby todo_list_runner.rb list
+$ ruby todo_list_runner.rb delete <task_id>
+$ ruby todo_list_runner.rb complete <task_id>
 ```
 
 Your text file (an example is included in this repo) will be simple.  Just task descriptions each on their own line.  Keep in mind that you will eventually have more information included, this is why we want you to use the CSV format.
@@ -59,13 +59,13 @@ Once you have a solid list of responsibilities you can start translating each in
 When you run
 
 ```text
-$ ruby todo.rb list
+$ ruby todo_list_runner.rb list
 ```
 
 your application should print out a list of all the TODOs. For example:
 
 ```text
-$ ruby todo.rb list
+$ ruby todo_list_runner.rb list
 1. Bake a delicious blueberry-glazed cheesecake
 2. Write up that memo and fax it out
 3. Conquer the world
@@ -82,7 +82,7 @@ Requirements:
 It should work like this
 
 ```text
-$ ruby todo.rb add Walk the dog
+$ ruby todo_list_runner.rb add Walk the dog
 Appended "Walk the dog" to your TODO list...
 $
 ```
@@ -96,15 +96,15 @@ Requirements:
 It should work like this
 
 ```text
-$ ruby todo.rb list
+$ ruby todo_list_runner.rb list
 1. Bake a delicious blueberry-glazed cheesecake
 2. Write up that memo and fax it out
 3. Conquer the world
 
-$ ruby todo.rb delete 3
+$ ruby todo_list_runner.rb delete 3
 Deleted "Conquer the world" from your TODO list...
 
-$ ruby todo.rb list
+$ ruby todo_list_runner.rb list
 1. Bake a delicious blueberry-glazed cheesecake
 2. Write up that memo and fax it out
 
