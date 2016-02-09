@@ -1,27 +1,12 @@
 # Command Line Todo List
 
-##Summary
+## Summary
+We're going to build a todo list application.  We're going to build our application feature-by-feature.  We'll start by displaying a list of items and proceed step-by-step until we've added all the required functionality. When our application is complete, a user will be able to display items, add items, remove items, and mark items as complete.
 
- This is the first of several iterations towards building a single-user command-line TODO application.  Each iteration will involve adding new commands and features.
+As we build our application, our design should follow object-oriented principles.  Think through each decision, keeping the [single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle), [separation of concerns](http://en.wikipedia.org/wiki/Separation_of_concerns), and other design principles in mind.
 
-From the user's perspective, we want to build something that works like this:
+As we work through each release, pay close attention to how *change* impacts our application.  When a new feature is added, how many files do we have to change?  How frustrating is it to make each change?  Did our previous design decisions make the application easier or more difficult to modify?
 
-```text
-$ ruby todo_list_runner.rb add Bake a delicious blueberry-glazed cheesecake
-$ ruby todo_list_runner.rb list
-$ ruby todo_list_runner.rb delete <task_id>
-$ ruby todo_list_runner.rb complete <task_id>
-```
-
-Your text file (an example is included in this repo) will be simple.  Just task descriptions each on their own line.  Keep in mind that you will eventually have more information included, this is why we want you to use the CSV format.
-
-Example:
-
-```text
-Bake a delicious blueberry-glazed cheesecake
-Go play miniature golf with Mike Tyson
-Become a World-Class Developer
-````
 
 ##Releases
 
@@ -131,9 +116,3 @@ Here's the way the file should be saved:
 What factors do you need to take into account to save this data correctly?  How does this change the parsing (besides not being able to use the CSV class)?
 
 Update your app to accommodate this new feature!
-
-##Optimize Your Learning
-
-Keep things like the [single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle) and [separation of concerns](http://en.wikipedia.org/wiki/Separation_of_concerns) in mind as you decide what objects and classes belong in your application.
-
-As you work through the iterations, pay close attention to how *change* impacts your application.  When a new feature is added how many files do you have to change?  How frustrating is it to make those changes?
