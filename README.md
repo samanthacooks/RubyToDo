@@ -1,4 +1,4 @@
-# Ruby Todos 1.0 Core Features
+# Command Line Todo List
 
 ##Learning Competencies
 
