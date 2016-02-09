@@ -3,31 +3,29 @@
 ## Summary
 We're going to build a todo list application.  We're going to build our application feature-by-feature.  We'll start by displaying a list of items and proceed step-by-step until we've added all the required functionality. When our application is complete, a user will be able to display items, add items, remove items, and mark items as complete.
 
-As we build our application, our design should follow object-oriented principles.  Think through each decision, keeping the [single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle), [separation of concerns](http://en.wikipedia.org/wiki/Separation_of_concerns), and other design principles in mind.
+As we build our application, our design should follow object-oriented principles.  Think through each decision, keeping the [single responsibility principle][wikipedia srp], [separation of concerns][wikipedia soc], and other design principles in mind.
 
 As we work through each release, pay close attention to how *change* impacts our application.  When a new feature is added, how many files do we have to change?  How frustrating is it to make each change?  Did our previous design decisions make the application easier or more difficult to modify?
 
 
-##Releases
+## Releases
+### Release 0: Display Todo List Items
+We have a CSV file that contains descriptions of some todo list items (see `todo_list_data.csv`).  We want to begin our application by displaying a list of items (see Figure 1).
 
-###Release 0 : Enumerate the responsibilities
-
-Start by enumerating the responsibilities of your TODO application.  These aren't just the user-facing commands like "add", "delete", etc.  They're also back-end responsibilities like reading and writing from the `todo_list_data.csv` file, parsing command-line arguments, and printing the "interface" to the console.
-
-Each responsibility should map to a concrete unit of Ruby code.  For example,
-
-Responsibility                                                                     | Code World
------------------------------------------------------------------------------------|------------------------------------
-Initialize an empty TODO list                                                      | `list = List.new`
-Add a task to a TODO list                                                          | `list.add(Task.new("walk the dog"))`
-Get all the tasks on a TODO list                                                   | ` tasks = list.tasks`
-Delete a particular task from a TODO list                                          | `???`
-Complete a particular task on a TODO list                                          | `???`
-Parse the command-line arguments and take the appropriate action                   | `???`
-Parse the `todo_list_data.csv` file and wrap each entry in easier-to-manipulate Ruby objects | `???`
+```
+$ ruby todo_list_runner.rb
+1.  Walk the cat.
+2.  Go to the gym.
+3.  Buy groceries for the week.
+4.  Call Penelope.
+```
+*Figure 1*.  Example of displaying a todo list.
 
 
-There are other responsibilities.  What are they?
+Before writing any code, think through the process necessary to display the list.  What do we need to do?  For example, we need to read the contents of the data file, represent the todo list in Ruby, represent each list item in Ruby, format the list for display, etc.  What other responsibilities are there?
+
+Once we've identified the responsibilities of our application, then determine what objects we need to fulfill those responsibilities—remembering to apply object-oriented design principles.  Then test and develop those objects and complete the release.
+
 
 ###Release 1 : Translate to Code
 
@@ -116,3 +114,9 @@ Here's the way the file should be saved:
 What factors do you need to take into account to save this data correctly?  How does this change the parsing (besides not being able to use the CSV class)?
 
 Update your app to accommodate this new feature!
+
+
+[wikipedia soc]: http://en.wikipedia.org/wiki/Separation_of_concerns
+[wikipedia srp]: http://en.wikipedia.org/wiki/Single_responsibility_principle
+
+
