@@ -12,6 +12,10 @@ As we work through each release, pay close attention to how *change* impacts our
 ### Release 0: Display Todo List Items
 We have a CSV file that contains descriptions of some todo list items (see `todo_list_data.csv`).  We want to begin our application by displaying a list of items (see Figure 1).
 
+Before writing any code, think through the process necessary to display the list.  What do we need to do?  For example, we need to read the contents of the data file, represent the todo list in Ruby, represent each list item in Ruby, format the list for display, etc.  What other responsibilities are there?
+
+Once we've identified the responsibilities of our application, then determine what objects we need to fulfill those responsibilities—remembering to apply object-oriented design principles.  Then test and develop those objects and complete the release.
+
 ```
 $ ruby todo_list_runner.rb
 1.  Walk the cat.
@@ -20,11 +24,6 @@ $ ruby todo_list_runner.rb
 4.  Call Penelope.
 ```
 *Figure 1*.  Example of displaying a todo list.
-
-
-Before writing any code, think through the process necessary to display the list.  What do we need to do?  For example, we need to read the contents of the data file, represent the todo list in Ruby, represent each list item in Ruby, format the list for display, etc.  What other responsibilities are there?
-
-Once we've identified the responsibilities of our application, then determine what objects we need to fulfill those responsibilities—remembering to apply object-oriented design principles.  Then test and develop those objects and complete the release.
 
 
 ### Release 1: Add New Items to the List
