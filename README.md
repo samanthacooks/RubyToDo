@@ -27,42 +27,28 @@ Before writing any code, think through the process necessary to display the list
 Once we've identified the responsibilities of our application, then determine what objects we need to fulfill those responsibilities—remembering to apply object-oriented design principles.  Then test and develop those objects and complete the release.
 
 
-###Release 1 : Translate to Code
+### Release 1: Add New Items to the List
+Add a new feature to the application:  users should be able to add new items to the list.  When running the application, users will now need to specify what they want to do; users will pass command line arguments to  display the todo list or add a new item (See Figure 2).
 
-Once you have a solid list of responsibilities you can start translating each into code.  Be sure to write comprehensive tests.
+In adding this feature, our application will have additional responsibilities.  We'll need to parse command line arguments and write to a file.  Anything else?  What object should be responsible for these new responsibilities?  Would it be appropriate for our existing objects to handle them?  Do we need new objects?
 
-####Implement the list command
-
-When you run
-
-```text
+```
 $ ruby todo_list_runner.rb list
-```
+1.  Walk the cat.
+2.  Go to the gym.
 
-your application should print out a list of all the TODOs. For example:
+$ ruby todo_list_runner.rb add "Finish code challenge."
+Appended "Finish code challenge." to the list.
 
-```text
 $ ruby todo_list_runner.rb list
-1. Bake a delicious blueberry-glazed cheesecake
-2. Write up that memo and fax it out
-3. Conquer the world
+1.  Walk the cat.
+2.  Go to the gym.
+3.  Finish code challenge.
 ```
+*Figure 2*.  Use command line arguments to display a todo list or add a new item. 
 
-You'll have to design and build basic controller and model code to make this work.  For example, how does your program know the user wants to "add" a task to their list?
 
-#### Implement the add command
 
-Requirements:
-
-- A user can add (append) a task to their TODO list
-
-It should work like this
-
-```text
-$ ruby todo_list_runner.rb add Walk the dog
-Appended "Walk the dog" to your TODO list...
-$
-```
 
 #### Implement the delete command
 
