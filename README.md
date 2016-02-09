@@ -1,11 +1,5 @@
 # Command Line Todo List
 
-##Learning Competencies
-
-* Create well-defined classes with a single responsibility
-* Identify and implement classes based on real world requirements
-* Implement clean and flexible interfaces between objects
-
 ##Summary
 
  This is the first of several iterations towards building a single-user command-line TODO application.  Each iteration will involve adding new commands and features.
