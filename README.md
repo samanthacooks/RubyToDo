@@ -65,17 +65,28 @@ $ ruby todo_list_runner.rb list
 *Figure 3*.  Removing an item from the list.
 
 
+### Release 3: Mark Items as Complete
+What do we do when we complete an item?  Given the current feature set, we'd have to remove it from the list; otherwise, it looks like we still need to take action on the item.  Add a feature that allows for completeness (see Figure 4).
+
+Completing this feature will involve a number of changes.  We'll have to update our data file to store whether each item is complete.  We'll have to change how an item is represented in Ruby; its state will need to reflect its completeness.  We'll need to modify how a list is displayed.  We'll need to update our tests.  What other changes will we need to make?  As we add this completeness feature, be mindful of how our design decisions facilitate and/or hinder the change.
+
+
+```
+$ ruby todo_list_runner.rb list
+1.  [ ] Walk the cat.
+2.  [ ] Go to the gym.
+
+$ ruby todo_list_runner.rb complete "walk the cat"
+Marked "Walk the cat." as complete.
+
+$ ruby todo_list_runner.rb list
+1.  [X] Walk the cat.
+2.  [ ] Go to the gym.
+```
+*Figure 4*.  Marking an item as complete.
 
 
 
-#### Implement completeness
-
-Requirements:
-
-- A user can complete a specific task from their TODO list
-- A completed TODO task will be identified as such when a user uses the `list` command
-
-**Note**: This will require changing the format of `todo_list_data.csv` and the code that parses it.
 
 ###Release 2 : Human Readable File
 
