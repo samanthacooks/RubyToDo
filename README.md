@@ -18,10 +18,10 @@ Once we've identified the responsibilities of our application, then determine wh
 
 ```
 $ ruby todo_list_runner.rb
-1.  Walk the cat.
-2.  Go to the gym.
-3.  Buy groceries for the week.
-4.  Call Penelope.
+- Walk the cat.
+- Go to the gym.
+- Buy groceries for the week.
+- Call Penelope.
 ```
 *Figure 1*.  Example of displaying a todo list.
 
@@ -33,16 +33,16 @@ In adding this feature, our application will have additional responsibilities.  
 
 ```
 $ ruby todo_list_runner.rb list
-1.  Walk the cat.
-2.  Go to the gym.
+- Walk the cat.
+- Go to the gym.
 
 $ ruby todo_list_runner.rb add "Finish code challenge."
 Appended "Finish code challenge." to the list.
 
 $ ruby todo_list_runner.rb list
-1.  Walk the cat.
-2.  Go to the gym.
-3.  Finish code challenge.
+- Walk the cat.
+- Go to the gym.
+- Finish code challenge.
 ```
 *Figure 2*.  Use command line arguments to display a todo list or add a new item.
 
@@ -53,14 +53,14 @@ Oh, the best laid plans ... Sometimes we add an item to the list, but as time pa
 
 ```
 $ ruby todo_list_runner.rb list
-1.  Walk the cat.
-2.  Go to the gym.
+- Walk the cat.
+- Go to the gym.
 
 $ ruby todo_list_runner.rb remove "gym"
 Removed "Go to the gym." from the list.
 
 $ ruby todo_list_runner.rb list
-1.  Walk the cat.
+- Walk the cat.
 ```
 *Figure 3*.  Removing an item from the list.
 
@@ -73,15 +73,15 @@ Completing this feature will involve a number of changes.  We'll have to update 
 
 ```
 $ ruby todo_list_runner.rb list
-1.  [ ] Walk the cat.
-2.  [ ] Go to the gym.
+[ ] Walk the cat.
+[ ] Go to the gym.
 
 $ ruby todo_list_runner.rb complete "walk the cat"
 Marked "Walk the cat." as complete.
 
 $ ruby todo_list_runner.rb list
-1.  [X] Walk the cat.
-2.  [ ] Go to the gym.
+[X] Walk the cat.
+[ ] Go to the gym.
 ```
 *Figure 4*.  Marking an item as complete.
 
