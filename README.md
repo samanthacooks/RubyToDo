@@ -44,34 +44,29 @@ $ ruby todo_list_runner.rb list
 2.  Go to the gym.
 3.  Finish code challenge.
 ```
-*Figure 2*.  Use command line arguments to display a todo list or add a new item. 
+*Figure 2*.  Use command line arguments to display a todo list or add a new item.
 
 
+### Release 2: Remove Items from the List 
+Oh, the best laid plans ... Sometimes we add an item to the list, but as time passes we no longer want or need to complete it.  Rather than have such items sit on the list forever, add a feature that allows users to remove items (see Figure 3). 
 
 
-#### Implement the delete command
-
-Requirements:
-
-- A user can delete a specific task from their TODO list
-
-It should work like this
-
-```text
-$ ruby todo_list_runner.rb list
-1. Bake a delicious blueberry-glazed cheesecake
-2. Write up that memo and fax it out
-3. Conquer the world
-
-$ ruby todo_list_runner.rb delete 3
-Deleted "Conquer the world" from your TODO list...
-
-$ ruby todo_list_runner.rb list
-1. Bake a delicious blueberry-glazed cheesecake
-2. Write up that memo and fax it out
-
-$
 ```
+$ ruby todo_list_runner.rb list
+1.  Walk the cat.
+2.  Go to the gym.
+
+$ ruby todo_list_runner.rb remove "gym"
+Removed "Go to the gym." from the list.
+
+$ ruby todo_list_runner.rb list
+1.  Walk the cat.
+```
+*Figure 3*.  Removing an item from the list.
+
+
+
+
 
 #### Implement completeness
 
