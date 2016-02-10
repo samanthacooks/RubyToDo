@@ -86,25 +86,25 @@ $ ruby todo_list_runner.rb list
 *Figure 4*.  Marking an item as complete.
 
 
+### Release 4: Change the Data Store
+Our todo list application is working well, but it's confined to the terminal.  Without their computers handy, uses cannot access their todo lists.  But what if users could print out their lists before going to run errands or what-have-you?  To facilitate printing a todo list, we'll format our data file to be more readable.
 
+Update the data store file in which we're storing the item data.  We'll switch from using a CSV file to using a plain text file (.txt) formatted as seen in Figure 5.
 
-###Release 2 : Human Readable File
+Pay attention to the effect this change has on our application.  We're only changing the backend data store file.  We'll need to change the way we read in and write out item data.  For example, we won't be using Ruby's `CSV` library.  Which objects do we expect to be affected by this change?  Which objects are actually affected?
 
-Here's the deal:  Google just LOVES your new command line todo app.  And they're ready to buy you out for millions if only you can change the CSV file to a human readable file, so that it can be printed out easily.  They also want the app to be able to handle commas in the task description - something a CSV file doesn't accommodate very easily.
-
-Here's the way the file should be saved:
 
 ```text
-1. [ ]  Bake a delicious blueberry-glazed cheesecake
-2. [X]  Write up that memo and fax it out
-3. [ ]  Conquer the world
+[X] Walk the cat.
+[ ] Go to the gym.
+[X] Buy groceries for the week.
+[ ] Call Penelope.
+[ ] Finish code challenge.
+[ ] Book hotel for vacation.
 ```
+*Figure 5*.  Format for the new data file.
 
-*(the brackets indicate whether the task has been completed or not)*
 
-What factors do you need to take into account to save this data correctly?  How does this change the parsing (besides not being able to use the CSV class)?
-
-Update your app to accommodate this new feature!
 
 
 [wikipedia soc]: http://en.wikipedia.org/wiki/Separation_of_concerns
