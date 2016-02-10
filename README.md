@@ -105,6 +105,16 @@ Pay attention to the effect this change has on our application.  We're only chan
 *Figure 5*.  Format for the new data file.
 
 
+## Conclusion
+Think about the responsibilities in our application.  There are four high-level responsibilities.  
+
+1. Manipulating in-memory Ruby objects that model a real-life todo list (Model).
+2. Formatting information and displaying it to the user (View).
+3. Interpreting user input and taking the appropriate action (Controller).
+4. Reading and writing data from a data file (Persistance).
+
+Model-View-Controller is a design pattern that we'll use to design almost all of our applications—both our command-line applications and our web applications later at Dev Bootcamp.  We'll learn more about this design patter going forward.  Which parts of our todo list application represent the model, the view, and the controller?
+
 
 
 [wikipedia soc]: http://en.wikipedia.org/wiki/Separation_of_concerns
