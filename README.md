@@ -113,7 +113,7 @@ Think about the responsibilities in our application.  There are four high-level 
 3. Interpreting user input and taking the appropriate action (Controller).
 4. Reading and writing data from a data file (Persistance).
 
-Model-View-Controller is a design pattern that we'll use to design almost all of our applications—both our command-line applications and our web applications later at Dev Bootcamp.  We'll learn more about this design patter going forward.  Which parts of our todo list application represent the model, the view, and the controller?
+Model-View-Controller is a design pattern that we'll use to design almost all of our applications—both our command-line applications and our web applications later at Dev Bootcamp.  We'll learn more about this design pattern going forward.  Which parts of our todo list application represent the model, the view, and the controller?
 
 
 
