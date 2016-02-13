@@ -47,8 +47,8 @@ $ ruby todo_list_runner.rb list
 *Figure 2*.  Use command line arguments to display a todo list or add a new item.
 
 
-### Release 2: Remove Items from the List 
-Oh, the best laid plans ... Sometimes we add an item to the list, but as time passes we no longer want or need to complete it.  Rather than have such items sit on the list forever, add a feature that allows users to remove items (see Figure 3). 
+### Release 2: Remove Items from the List
+Oh, the best laid plans ... Sometimes we add an item to the list, but as time passes we no longer want or need to complete it.  Rather than have such items sit on the list forever, add a feature that allows users to remove items (see Figure 3).
 
 
 ```
@@ -87,7 +87,7 @@ $ ruby todo_list_runner.rb list
 
 
 ### Release 4: Change the Data Store
-Our todo list application is working well, but it's confined to the terminal.  Without their computers handy, uses cannot access their todo lists.  But what if users could print out their lists before going to run errands or what-have-you?  To facilitate printing a todo list, we'll format our data file to be more readable.
+Our todo list application is working well, but it's confined to the terminal.  Without their computers handy, users cannot access their todo lists.  But what if users could print out their lists before going to run errands or what-have-you?  To facilitate printing a todo list, we'll format our data file to be more readable.
 
 Update the data store file in which we're storing the item data.  We'll switch from using a CSV file to using a plain text file (.txt) formatted as seen in Figure 5.
 
@@ -106,7 +106,7 @@ Pay attention to the effect this change has on our application.  We're only chan
 
 
 ## Conclusion
-Think about the responsibilities in our application.  There are four high-level responsibilities.  
+Think about the responsibilities in our application.  There are four high-level responsibilities.
 
 1. Manipulating in-memory Ruby objects that model a real-life todo list (Model).
 2. Formatting information and displaying it to the user (View).
