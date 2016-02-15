@@ -91,7 +91,7 @@ Our todo list application is working well, but it's confined to the terminal.  W
 
 Update the data store file in which we're storing the item data.  We'll switch from using a CSV file to using a plain text file (.txt) formatted as seen in Figure 5.
 
-Pay attention to the effect this change has on our application.  We're not only changing the backend data store file.  We'll need to change the way we read in and write out item data.  For example, we won't be using Ruby's `CSV` library.  Which objects do we expect to be affected by this change?  Which objects are actually affected?
+We're changing the backend data store file.  Pay attention to the effect this change has on our application.  For example, we won't be using Ruby's `CSV` library any longer, so we'll need to update the way we read in and write out item data.  Which objects do we expect to be affected by this change?  Which objects are actually affected?
 
 
 ```text
