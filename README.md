@@ -27,9 +27,10 @@ $ ruby todo_list_runner.rb
 
 
 ### Release 1: Add New Items to the List
-Add a new feature to the application:  users should be able to add new items to the list.  When running the application, users will now need to specify what they want to do; users will pass command line arguments to  display the todo list or add a new item (See Figure 2).
+Add a new feature to the application:  users should be able to add new items to the list.  When running the application, users will now need to specify what they want to do; users will pass command line arguments to  display the todo list or to add a new item (See Figure 2).  When an item is added, persist the change by updating the data store file.  
 
 In adding this feature, our application will have additional responsibilities.  We'll need to parse command line arguments and write to a file.  Anything else?  What object should be responsible for these new responsibilities?  Would it be appropriate for our existing objects to handle them?  Do we need new objects?
+
 
 ```
 $ ruby todo_list_runner.rb list
@@ -48,7 +49,7 @@ $ ruby todo_list_runner.rb list
 
 
 ### Release 2: Remove Items from the List
-Oh, the best laid plans ... Sometimes we add an item to the list, but as time passes we no longer want or need to complete it.  Rather than have such items sit on the list forever, add a feature that allows users to remove items (see Figure 3).
+Oh, the best laid plans ... Sometimes we add an item to the list, but as time passes we no longer want or need to complete it.  Rather than have such items sit on the list forever, add a feature that allows users to remove items (see Figure 3).  Again, we want to persist changes to the list, so the data store file should be updated to reflect that an item was removed.
 
 
 ```
@@ -66,7 +67,7 @@ $ ruby todo_list_runner.rb list
 
 
 ### Release 3: Mark Items as Complete
-What do we do when we complete an item?  Given the current feature set, we'd have to remove it from the list; otherwise, it looks like we still need to take action on the item.  Add a feature that allows for completeness (see Figure 4).
+What do we do when we complete an item?  Given the current feature set, we'd have to remove it from the list; otherwise, it looks like we still need to take action on the item.  Add a feature that allows for completeness (see Figure 4).  As with the other changes to the list, marking an item as complete should be persisted in the data store.
 
 Completing this feature will involve a number of changes.  We'll have to update our data file to store whether each item is complete.  We'll have to change how an item is represented in Ruby; its state will need to reflect its completeness.  We'll need to modify how a list is displayed.  We'll need to update our tests.  What other changes will we need to make?  As we add this completeness feature, be mindful of how our design decisions facilitate and/or hinder the change.
 
