@@ -5,12 +5,16 @@ require_relative 'todo_list'
 require_relative 'task_writer'
 
 
-today = ToDoList.new
-my_list = today.load_todo_list('todo_list_data.csv')
+# today = ToDoList.new
+# my_list = today.load_todo_list('todo_list_data.csv')
 
-p my_list
+#  completed_task = TaskWriter.complete('todo_list_data.csv',"Sleep.")
 
-completed_task = TaskWriter.complete('todo_list_data.csv',completed)
+
+
+# p my_list
+
+
 
 if ARGV.any?
 
