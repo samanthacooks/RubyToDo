@@ -1,5 +1,3 @@
-require_relative 'task'
-
 class ToDoList
 
   def initialize

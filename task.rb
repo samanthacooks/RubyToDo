@@ -1,4 +1,3 @@
-
 class Task
   attr_reader :item_description
 
