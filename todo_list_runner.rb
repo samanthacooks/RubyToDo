@@ -2,7 +2,7 @@ require 'csv'
 require 'pry'
 require_relative 'task'
 require_relative 'todo_list'
-require_relative 'new_task'
+require_relative 'task_writer'
 
 
 if ARGV.any?
@@ -26,6 +26,12 @@ when "add"
     adding_task = TaskWriter.write('todo_list_data.csv', new_task)
 
     puts "Appended #{new_task} to the list."
+when "remove"
+  then
+  delete_task = ARGV[1]
+  removing_task = TaskWriter.delete('todo_list_data.csv', delete_task)
+
+  puts "Removed #{delete_task} from the list."
   else
     puts "I don't know."
   end
