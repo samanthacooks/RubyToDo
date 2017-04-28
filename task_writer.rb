@@ -31,21 +31,20 @@ module TaskWriter
         row[:item_description].include?(task)
     end
 
-    File.open(filename, "w") do |new_csv|
-      new_csv.write(data.to_csv)
-    end
+    self.update_csv(filename,data)
   end
 
   def self.complete(filename,task)
     data = CSV.table(filename)
     data.each do |row|
       if row[:item_description] == task
-        row[:complete] == "complete"
+        p "[X] #{row[:item_description]}"
       else
+        p "[ ] #{row[:item_description]}"
       end
     end
     self.update_csv(filename,data)
-    self.pretty_list(filename)
+    # self.pretty_list(filename)
   end
 
 end
