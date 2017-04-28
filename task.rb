@@ -3,6 +3,7 @@ class Task
 
   def initialize(args)
     @item_description = args.fetch(:item_description)
+    @completed = args.fetch(:completed)
   end
 
 end

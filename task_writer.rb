@@ -15,7 +15,7 @@ module TaskWriter
   def self.pretty_list(filename)
     data = CSV.table(filename)
     data.each do |task|
-      if task[:complete] == "complete"
+      if task[:completed] == "true"
         p "[X] #{task[:item_description]}"
       else
         p "[ ] #{task[:item_description]}"
@@ -38,13 +38,11 @@ module TaskWriter
     data = CSV.table(filename)
     data.each do |row|
       if row[:item_description] == task
-        p "[X] #{row[:item_description]}"
-      else
-        p "[ ] #{row[:item_description]}"
+        row[:completed] = "true"
       end
     end
     self.update_csv(filename,data)
-    # self.pretty_list(filename)
+    self.pretty_list(filename)
   end
 
 end
