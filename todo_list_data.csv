@@ -1,14 +1,14 @@
-item_description
-Walk the cat.
-Go to the gym.
-Buy groceries for the week.
-Call Penelope.,
-Finish code challenge.
-Book hotel for vacation.
-Pay cable bill.
-Call insurance company.
-Read Ruby Under a Microscope.
-Book eye appointment for new glasses.
-Learn how to pick locks.,
-Find good recipe for dinner party.
-Sleep
+item_description,completed
+Walk the cat.,false
+Go to the gym.,false
+Buy groceries for the week.,false
+Call Penelope.,false
+Finish code challenge.,false
+Book hotel for vacation.,false
+Pay cable bill.,false
+Call insurance company.,false
+Read Ruby Under a Microscope.,false
+Book eye appointment for new glasses.,false
+Learn how to pick locks.,false
+Find good recipe for dinner party.,false
+Sleep,true
